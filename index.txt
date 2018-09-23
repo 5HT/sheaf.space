@@ -1,0 +1,73 @@
+
+HTT COURSE 2018
+5HT
+
+FOUNDATIONS
+
+Issue I: Type Theory
+Tags: Pi, Sigma, Path, MLTT.
+
+Issue II: Inductive Types
+Tags: Empty, Unit, Bool, Fin, Nat, Stream, List,
+Vector, Maybe, Result, Fix, Control, Recursion.
+
+Issue III: Homotopy Type Theory
+Tags: Functional Extensionality, Pullback,
+Fibration, Equivalence, Isomorphism, Univalence,
+Surjective, Injective, Embedding, n-Type.
+
+Issue IV: Higher Inductive Types
+Tags: Interval, S0, S1, S2, S3, Helix, R,
+Truncation, Quotient, Ball, Torus, Shape,
+Suspention, Pushout, CW-complex.
+
+Issue V: Modalities
+Tags: Infinitesimal, Process.
+
+MATHEMATICS
+
+Issue VI: Set Theory
+Tags: AC, LEM, Union, Intersection,
+Proposions, Sets, Logic.
+
+Issue VII: Category Theory
+Tags: Category, Functor, Adjoint, Pullback,
+Pushout, Limit, Kan, Structure Identity Principle, Cones,
+Universal Mapping Property, Categories with Families.
+
+Issue VIII: Topos Theory
+Tags: Topology, Elementary Topos,
+Grothendieck Topos, Sheaf, Geometric Morphism,
+Sheaf Model of Type Theory.
+
+Issue IX: Algebraic Topology
+Tags: Cellular, Chain, Homotopy, Base Change,
+Change of Fiber, Character Variety,
+Classifying Space, Cofiber, Cobordism, Cohomology,
+Cohomotopy, Cone, CW-Complex, Contractible,
+Covering, Cup Product, Exact, Fibration, Fibration Sequence,
+
+Fundamental Group, Free, G-Fibration,
+Homotopy Group, H-Space, Homology,
+Quotinent, Sphere, Hopf Fibration, Loop Space,
+Kan Complex, Pullback, Pushout, Suspension,
+Truncation, Pointed Space, Fiber Sequence,
+Singular, Simplicial, Spectrum, Van Kampen, Wedge.
+
+Issue X: Differential Geometry
+Tags: Atlas, Connection, Cartan Geometry,
+Diffeomorphism, Embedding, Fiber, Fiber Bunble,
+Flow, Genus, Immersion, Lens Space, Manifold,
+Principal Bundle, Pullback, Section, Submanifold,
+
+Submersion, Surface, Tangent Bundle, Tangent Space,
+Torus, Localization, Trivialization, Vector Field,
+Whitney Sum, V-Manifold, Left Invertible H-Space,
+G-structure, Etale Map, Infinitesimal, Disk Bundle.
+
+ADDENDUMS
+
+Addendum I: Pure Type System for Erlang
+Addendum II: Many Faces of Equality
+
+Backlink: https://twitter.com/5HT/status/
