@@ -19,7 +19,7 @@
                         tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']],
                                    processEscapes: true }
                     };
-</script></head><body class="content"><article class="main"><div class="om"><section><h1>SHEAF MODEL <br> OF TYPE THEORY</h1></section></div><aside><a href="https://tonpa.guru">Максим Сохацький</a><time>Published: 01 JAN 2019</time></aside><div class="om"><section><figure>$$\def\mapright#1{\xrightarrow{{#1}}}
+</script></head><body class="content"><article class="main"><div class="om"><section><h1>SHEAF TYPE THEORIES</h1></section></div><aside><a href="https://tonpa.guru">Максим Сохацький</a><time>Published: 01 JAN 2019</time></aside><div class="om"><section><figure>$$\def\mapright#1{\xrightarrow{{#1}}}
   \def\mapdown#1{\Big\downarrow\rlap{\raise2pt{\scriptstyle{#1}}}}
   \def\mapdiagl#1{\vcenter{\searrow}\rlap{\raise2pt{\scriptstyle{#1}}}}
   \def\mapdiagr#1{\vcenter{\swarrow}\rlap{\raise2pt{\scriptstyle{#1}}}}
@@ -44,6 +44,13 @@ the set of arrows $I \rightarrow X$. Given anarrow $f:J \rightarrow I$
 composition with f maps an arrow $I \rightarrow X$ to an arrow $J \rightarrow X$.
 In other words $\mathrm{Yo}_X(J)$
 then a set of maps $I \rightarrow J$ and the restriction maps defined by composition.
+</p><p><b>Definition</b> (Seive).
+A sieve $S$ on $I$ is a set of maps with codomain $I$ such that $f g: K \rightarrow I$
+is in $S$ whenever $f : J \rightarrow I$ is in $S$ and $g : K \rightarrow J$.</p><p><b>Definition</b> (Subpresheaf $\Omega(I)$).
+Subpresheaf of a presheaf A is a map $A \rightarrow \Omega_d(I)$, which
+for each $I$ selects a subset of $A(I)$ of shape $I$ defined by polyhedron A.
+$\Omega_d(I)$ is a presheaf where $\Omega_d(I)$ is a set of decidable seives,
+so that we can decide if $f: I \rightarrow J$ is a member of $S$.
 </p><h1>DEPENDENT TYPES</h1><p><b>Definition</b> (Type).
 A type is interpreted as a presheaf $A$, a family of sets $A_I$ with restriction maps
 $u \mapsto uf, A_I \rightarrow A_J$ for $f: J\rightarrow I$. A dependent type
@@ -56,11 +63,22 @@ implication in a Kripke model.</p><p><b>Defintion</b> (Pi). An element $w:[\Pi(x
 of functions $w_f : \Pi(u:A(J))B(J,u)$ for $f : J \rightarrow I$ such
 that $(w_f u)g=w_{fg}(ug)$ when $u:A(J)$ and $g:K\rightarrow J$.</p><p><b>Defintion</b> (Sigma). The set $\Sigma(x:A)B(x)$ is the set
 of pairs $(u,v)$ when $u:A(I),v:B(I,u)$ and restriction map $(u,v)f=(u f,v f)$.
+</p><h1>SIMPLICIAL TYPES</h1><p>The Simplicial Type Theory is defined as a presheaf on category of
+finite linear posets [n] and monotone maps. Let's write a presheaf
+as $F: \Delta^{op} \rightarrow \mathrm{Set}$. In a sense that this
+is a category on a shapes, the notion of subpolyhedras is then
+represented by subpresheaves.
 </p><h1>CUBICAL TYPES</h1><p>The identity types modeled with another presheaf, the presheaf on Lawvere
 category of distributive lattices (theory of de Morgan algebras) denoted
-with $\Box$ &mdash; $F : \Box^{op} \rightarrow \mathrm{Set}$.
+with $\Box$ &mdash; $\mathbb{I} : \Box^{op} \rightarrow \mathrm{Set}$.
+</p><p><b>Properties of $\mathbb{I}$</b>. The presheaf $\mathbb{I}$:
+i) has to distinct global elements $0$ and $1$ (B$_1$);
+ii) $\mathbb{I}$(I) has a decidable equality for each $I$ (B$_2$);
+iii) $\mathbb{I}$ is tiny so the path functor $X \mapsto X^\mathbb{I}$ has right adjoint (B$_3$).;
+iv) $\mathbb{I}$ has meet and join (connections).</p><p>NOTE: In the simplicial model B$_3$ condition is underivable.
 </p><h1>SIMPLIFICATION</h1><p>What if we take not a category as the underlying objects for sheaves
-but monoidal structure just to simplify the model. The we get the following</p><code>isPSh (G: U) (M: monoid): U
+but monoidal structure just to simplify the model?
+</p><code>isPSh (G: U) (M: monoid): U
   = (c: G -> M.1.1 -> G)
   * (left: (g: G) -> Path G (c g M.2.2.2.1) g)
   * ((g: G) (t r: M.1.1) -> Path G (c (c g t) r)
@@ -89,4 +107,14 @@ isType (M: monoid) (G: PSh M) (A: G.1 -> U): U
 
 Type (M: monoid) (G: PSh M): U
   = (A: G.1 -> U)
-  * isType M G A</code></section></div></article><footer class="footer"><a href="https://tonpa.guru/"><img class="footer__logo" src="https://longchenpa.guru/seal.png" width="50"></a><span class="footer__copy">2016&mdash;2019 &copy; <a href="https://groupoid.space/" style="color:Lavender;">Groupoid Infinity</a></span></footer><script src="https://groupoid.space/bundle.js"></script><script src="https://groupoid.space/highlight.js?v=9"></script></body></html>
+  * isType M G A</code><p></p><h1>LITERATURE</h1><p>[1]. Thierry Coquand.
+<a href="http://delivery.acm.org/10.1145/3250000/3242962/p54-coquand.pdf?ip=82.144.205.10&id=3242962&acc=ACTIVE%20SERVICE&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E9A5D142196D1AE83%2E4D4702B0C3E38B35&__acm__=1547329665_48c1a19e175301c088e226b402d08640">A Survey of Constructive Presheaf Models of Univalence</a>.
+
+[2]. Mark Bickford.
+<a href="https://arxiv.org/pdf/1806.06114.pdf">Formalizing Category Theory and Presheaf Models of Type Theory in Nuprl</a>.
+
+[3]. Chuangjie Xu.
+<a href="http://cj-xu.github.io/ContinuityType/xu-thesis.pdf">A Continuous Computational Interpretation of Type Theories</a>.
+
+[4]. Thierry Coquand, Bassel Mannaa, Fabian Ruch.
+<a href="https://arxiv.org/pdf/1701.02571.pdf">Stack Semantics of Type Theory</a>.</p></section></div></article><footer class="footer"><a href="https://tonpa.guru/"><img class="footer__logo" src="https://longchenpa.guru/seal.png" width="50"></a><span class="footer__copy">2016&mdash;2019 &copy; <a href="https://groupoid.space/" style="color:Lavender;">Groupoid Infinity</a></span></footer><script src="https://groupoid.space/bundle.js"></script><script src="https://groupoid.space/highlight.js?v=9"></script></body></html>
