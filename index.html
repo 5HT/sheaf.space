@@ -37,7 +37,14 @@ composition $f\ g : K \rightarrow I$ for $g : K \rightarrow J$, $f : I \rightarr
 This means a presheaf $\mathrm{PSh}_C$ is given by a family of sets $C_I$
 and restriction maps $u \mapsto u\ f$, $C_I \rightarrow C_J$ for
 $f:J \rightarrow I$ satisfying the laws $u\ 1_I = u$ and $(uf)g=u(fg)$ for
-$g:K \rightarrow J$.</p><p><b>Definition</b> (Yoneda presheaf $\mathrm{Yo}_X$).
+$g:K \rightarrow J$. The family of sets $C_I$ is called right action.
+</p><p>By the nature of the rescription maps we could classify presheaves:
+i) if thre restriction maps forms a boundary operator
+$\delta : u_{n} \mapsto v_{n-1}$, such that $\delta \delta = 0$
+then this is cohomology presheaf; ii) if the restriction map is a process action
+$\pi : s_{n} \mapsto s_{n+1}$ then this is process preshef;
+iii) if the restriction map actually restricts the domain the such presheaf is
+called topological (default meaning).</p><p><b>Definition</b> (Yoneda presheaf $\mathrm{Yo}_X$).
 Any object $X$ of base category $C$ defines a
 presheaf $\mathrm{Yo}_X$ represented by $X$.
 This presheaf $\mathrm{Yo}_X$ assigns to each object $I$ in $C$
@@ -82,8 +89,9 @@ but monoidal structure just to simplify the model?
 </p><code>isPSh (G: U) (M: monoid): U
   = (c: G -> M.1.1 -> G)
   * (left: (g: G) -> Path G (c g M.2.2.2.1) g)
-  * ((g: G) (t r: M.1.1) -> Path G (c (c g t) r)
-                                   (c g (M.2.1 t r)))
+  * ((g: G) (t r: M.1.1)
+ -> Path G (c (c g t) r)
+           (c g (M.2.1 t r)))
 
 PSh (M: monoid): U
   = (G: U)
@@ -91,10 +99,9 @@ PSh (M: monoid): U
 
 NatPSh (M: monoid) (D G: PSh M): U
   = (sigma: D.1 -> G.1)
-  * ((s: D.1)(t: M.1.1) -> Path G.1 (G.2.1 (sigma s) t)
-                                    (sigma (D.2.1 s t)))
-
-isType (M: monoid) (G: PSh M) (A: G.1 -> U): U
+  * ((s: D.1)(t: M.1.1)
+ -> Path G.1 (G.2.1 (sigma s) t)
+             (sigma (D.2.1 s t)))</code><br><code>isType (M: monoid) (G: PSh M) (A: G.1 -> U): U
   = (star: (g: G.1) -> A g -> (t: M.1.1) -> A (G.2.1 g t))
   * (coe1: (g: G.1) (t: M.1.1)
  -> Path U (A g) (A (G.2.1 g t)))
@@ -104,11 +111,9 @@ isType (M: monoid) (G: PSh M) (A: G.1 -> U): U
  -> PathP (coe1 g M.2.2.2.1) a (star g a M.2.2.2.1))
   * ((g:G.1)(a:A g) (t r: M.1.1)
  -> PathP (coe2 g t r) (star (G.2.1 g t) (star g a t) r)
-                       (star g a (M.2.1 t r)))
-
-Type (M: monoid) (G: PSh M): U
-  = (A: G.1 -> U)
-  * isType M G A</code><p></p><h1>LITERATURE</h1><p>[1]. Thierry Coquand.
+                       (star g a (M.2.1 t r)))</code><br><code>Ctx: monoid -> U = PSh
+Type (M: monoid) (G: PSh M): U = (A: G.1 -> U) * isType M G A
+Substitution: (M: monoid) -> Ctx M -> Ctx M -> U = NatPSh</code><br><h1>LITERATURE</h1><p>[1]. Thierry Coquand.
 <a href="https://5ht.co/p54-coquand.pdf">A Survey of Constructive Presheaf Models of Univalence</a>.
 
 [2]. Mark Bickford.
