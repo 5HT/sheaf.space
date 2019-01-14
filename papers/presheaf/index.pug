@@ -133,16 +133,16 @@ block content
 
                 h1 SIMPLICIAL TYPES
                 p.
-                    <b>Definition</b> (Simplicial Type Theory).
+                    <b>Definition</b> (Simplicial Presheaf).
                     The Simplicial Type Theory is defined as a presheaf on category of
-                    finite linear posets [n] and monotone maps. Let's write a presheaf
+                    finite linear posets $[n]$ and monotone maps. Let's write a presheaf
                     as $F: \Delta^{op} \rightarrow \mathrm{Set}$. In a sense that this
                     is a category on a shapes, the notion of subpolyhedras is then
                     represented by subpresheaves.
 
                 h1 CUBICAL TYPES
                 p.
-                    <b>Definition</b> (Cubical Types Presheaf $\mathbb{I}$).
+                    <b>Definition</b> (Cubical Presheaf $\mathbb{I}$).
                     The identity types modeled with another presheaf, the presheaf on Lawvere
                     category of distributive lattices (theory of de Morgan algebras) denoted
                     with $\Box$ &mdash; $\mathbb{I} : \Box^{op} \rightarrow \mathrm{Set}$.
@@ -160,20 +160,20 @@ block content
                     The subpresheaf $\mathbb{F}$ corresponds to a map
                     $\mathrm{Cofib} : \Omega \rightarrow \Omega$ so that $\mathbb{F}$ can
                     be seen internally as the subpresheaf of propositions $\varphi$ in
-                    $\mathbb{F}$ satisfying the property $\mathrm{Cofib}(\varphi)$ (which
+                    $\mathbb{F}$ satisfying the property $\mathrm{Cofib}\ (\varphi)$ (which
                     reads ``$\varphi$ is cofibrant''). In other words $\mathbb{F}$
                     classified cofibrant maps.
                 p.
                     <b>Properties of $\mathbb{F}$</b>:
                     i) cofibrant maps should contain isomorphisms and be closed under composition (A$_1$);
                     ii) $\mathbb{F}$ is closed under disjunction:
-                    $\mathrm{Cofib}(\varphi_1 \wedge \varphi_2)$ if
-                    $\mathrm{Cofib}(\varphi_1)$ and $\mathrm{Cofib}(\varphi_2)$ (A$_2$).
+                    $\mathrm{Cofib}\ (\varphi_1 \wedge \varphi_2)$ if
+                    $\mathrm{Cofib}\ (\varphi_1)$ and $\mathrm{Cofib}\ (\varphi_2)$ (A$_2$).
                 p.
                     <b>Mixing Properties</b>. This properties defined how we can mix the
                     contexts of depedent types and cubical types:
-                    i) edges are not equal: $\forall\ (i: \mathbb{I})\ \mathrm{Cofib}(i=0) \wedge \mathrm{Cofib}(i=1)$ (C$_1$);
-                    ii) cofibrations $\forall\ (i: \mathbb{I})\ \mathrm{Cofib}(\phi) \rightarrow \mathrm{Cofib}(\forall(i: \mathbb{I})\ \phi))$ (C$_2$).
+                    i) edges are not equal: $\forall\ (i: \mathbb{I})\ \mathrm{Cofib}\ (i=0) \wedge \mathrm{Cofib}\ (i=1)$ (C$_1$);
+                    ii) cofibrations $\forall\ (i: \mathbb{I})\ \mathrm{Cofib}\ (\phi) \rightarrow \mathrm{Cofib}\ (\forall(i: \mathbb{I})\ \phi))$ (C$_2$).
 
                 h1 SIMPLIFICATION
                 p.
@@ -233,6 +233,12 @@ block content
 
                     [5]. Ian Orton, Andrew M. Pitts.
                     <a href="http://drops.dagstuhl.de/opus/volltexte/2016/6564/pdf/LIPIcs-CSL-2016-24.pdf">Axioms for Modelling Cubical Type Theory in a Topos</a>.
+
+                    [6]. Thierry Coquand, Simon Huber, Anders Mörtberg.
+                    <a href="https://arxiv.org/pdf/1802.01170.pdf">On Higher Inductive Types in Cubical Type Theory</a>
+
+                    [7]. Cyril Cohen, Thierry Coquand, Simon Huber, and Anders Mörtberg.
+                    <a href="https://arxiv.org/pdf/1611.02108.pdf">Cubical Type Theory: a constructive interpretation of the univalence axiom</a>
 
     include ../../footer.pug
 
