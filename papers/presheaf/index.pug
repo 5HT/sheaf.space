@@ -136,7 +136,7 @@ block content
                     <b>Definition</b> (Simplicial Presheaf).
                     The Simplicial Type Theory is defined as a presheaf on category of
                     finite linear posets $[n]$ and monotone maps. Let's write a presheaf
-                    as $F: \Delta^{op} \rightarrow \mathrm{Set}$. In a sense that this
+                    as $\mathrm{sSet}: \Delta^{op} \rightarrow \mathrm{Set}$. In a sense that this
                     is a category on a shapes, the notion of subpolyhedras is then
                     represented by subpresheaves.
 
@@ -167,13 +167,18 @@ block content
                     <b>Properties of $\mathbb{F}$</b>:
                     i) cofibrant maps should contain isomorphisms and be closed under composition (A$_1$);
                     ii) $\mathbb{F}$ is closed under disjunction:
-                    $\mathrm{Cofib}\ (\varphi_1 \wedge \varphi_2)$ if
-                    $\mathrm{Cofib}\ (\varphi_1)$ and $\mathrm{Cofib}\ (\varphi_2)$ (A$_2$).
+                    $\mathrm{Cofib}\ (\varphi_2) \rightarrow
+                    \mathrm{Cofib}\ (\varphi_1) \rightarrow
+                    \mathrm{Cofib}\ (\varphi_1 \wedge \varphi_2)$
+                     (A$_2$).
                 p.
                     <b>Mixing Properties</b>. This properties defined how we can mix the
                     contexts of depedent types and cubical types:
-                    i) edges are not equal: $\forall\ (i: \mathbb{I})\ \mathrm{Cofib}\ (i=0) \wedge \mathrm{Cofib}\ (i=1)$ (C$_1$);
+                    i) wedge $\forall\ (i: \mathbb{I})\ \mathrm{Cofib}\ (i=0) \wedge \mathrm{Cofib}\ (i=1)$ (C$_1$);
                     ii) cofibrations $\forall\ (i: \mathbb{I})\ \mathrm{Cofib}\ (\phi) \rightarrow \mathrm{Cofib}\ (\forall(i: \mathbb{I})\ \phi))$ (C$_2$).
+                p.
+                    NOTE: B$_4$ could be replaced with strengthened
+                    C$_1$ &mdash; $\forall\ (i:\mathbb{I})\ \mathrm{Cofib}\ (i = j)$.
 
                 h1 SIMPLIFICATION
                 p.
