@@ -276,7 +276,11 @@ colimits and limits, respectively.</p><p><b>Definition</b> (Point of a Topos).
 A point $x$ of a topos $E$ is a geometric morphism: $p: \mathrm{Set} \rightarrow E$.</p><p><b>Definition</b> (Stalk).
 The stalk at $x$ of an object $e \in E$ is the image of $e$ under
 corresponding inverse image morphism
-$x^{-1}: E \rightarrow \mathrm{Set}$.
+$x^{-1}: E \rightarrow \mathrm{Set}$.</p><p><b>Definition</b> (Étale space $\mathrm{Spé}(F)$).
+Let $X$ &mdash; a topological space, $C$ a category and $F$ is a $C$-valued presheaf on $X$.
+Then, the étalé space is a a pair $(\mathrm{Ét}(F),\pi)$ where:
+i) $\mathrm{Ét}(F)$ is a disjoin union $\bigcup_{x\in X} F_x$ of stalks of $F$;
+ii) $\pi: \mathrm{Ét}(F) \rightarrow X$ is the canonical projection.
 </p><h2>Elementary Topos</h2><p>Giraud theorem was a synonymical topos definition that involved only topos
 properties but not site properties. That was a step forward in
 predicative definition. The other step was made by Lawvere and Tierney,
